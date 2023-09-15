@@ -1,54 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html >
+
 <head>
-    <title>Boston Housing Data Input</title>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
 </head>
+
 <body>
-    <h1>Input Boston Housing Data</h1>
-    <form method="POST" action="/predict">
-        <label for="CRIM">CRIM (per capita crime rate by town):</label>
-        <input type="text" name="CRIM" id="CRIM" required><br>
+ <div class="login">
+	<h1>Boston House Price Prediction</h1>
 
-        <label for="ZN">ZN (proportion of residential land zoned for lots over 25,000 sq.ft.):</label>
-        <input type="text" name="ZN" id="ZN" required><br>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="CRIM" placeholder="CRIM" required="required" /><br>
+    	<input type="text" name="ZN" placeholder="ZN" required="required" /><br>
+        <input type="text" name="INDUS" placeholder="INDUS" required="required" /><br>
+        <input type="text" name="CHAS" placeholder="CHAS" required="required" /><br>
+        <input type="text" name="NOX" placeholder="NOX" required="required" /><br>
+        <input type="text" name="RM" placeholder="RM" required="required" /><br>
+        <input type="text" name="Age" placeholder="Age" required="required" /><br>
+        <input type="text" name="DIS" placeholder="DIS" required="required" /><br>
+        <input type="text" name="RAD" placeholder="RAD" required="required" /><br>
+        <input type="text" name="TAX" placeholder="TAX" required="required" /><br>
+        <input type="text" name="PTRATIO" placeholder="PTRATIO" required="required" /><br>
+        <input type="text" name="B" placeholder="B" required="required" /><br>
+        <input type="text" name="LSTAT" placeholder="LSTAT" required="required" /><br>
 
-        <label for="INDUS">INDUS (proportion of non-retail business acres per town):</label>
-        <input type="text" name="INDUS" id="INDUS" required><br>
+       
 
-        <label for="CHAS">CHAS (Charles River dummy variable, 1 if tract bounds river; 0 otherwise):</label>
-        <input type="text" name="CHAS" id="CHAS" required><br>
-
-        <label for="NOX">NOX (nitric oxides concentration, parts per 10 million):</label>
-        <input type="text" name="NOX" id="NOX" required><br>
-
-        <label for="RM">RM (average number of rooms per dwelling):</label>
-        <input type="text" name="RM" id="RM" required><br>
-
-        <label for="AGE">AGE (proportion of owner-occupied units built prior to 1940):</label>
-        <input type="text" name="AGE" id="AGE" required><br>
-
-        <label for="DIS">DIS (weighted distances to five Boston employment centres):</label>
-        <input type="text" name="DIS" id="DIS" required><br>
-
-        <label for="RAD">RAD (index of accessibility to radial highways):</label>
-        <input type="text" name="RAD" id="RAD" required><br>
-
-        <label for="TAX">TAX (full-value property-tax rate per $10,000):</label>
-        <input type="text" name="TAX" id="TAX" required><br>
-
-        <label for="PTRATIO">PTRATIO (pupil-teacher ratio by town):</label>
-        <input type="text" name="PTRATIO" id="PTRATIO" required><br>
-
-        <label for="B">B (1000(Bk - 0.63)^2 where Bk is the proportion of blacks by town):</label>
-        <input type="text" name="B" id="B" required><br>
-
-        <label for="LSTAT">LSTAT (% lower status of the population):</label>
-        <input type="text" name="LSTAT" id="LSTAT" required><br>
-
-        <label for="MEDV">MEDV (Median value of owner-occupied homes in $1000's):</label>
-        <input type="text" name="MEDV" id="MEDV" required><br>
-
-        <input type="submit" value="Predict">
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
 </body>
 </html>
