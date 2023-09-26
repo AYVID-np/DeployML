@@ -14,25 +14,28 @@
 
 <body>
  <div class="login">
-	<h1>Boston House Price Prediction</h1>
+	<h1>Rossman Sales Prediction</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-      <input type="text" name="CRIM" placeholder="CRIM" required="required" /><br>
-    	<input type="text" name="ZN" placeholder="ZN" required="required" /><br>
-        <input type="text" name="INDUS" placeholder="INDUS" required="required" /><br>
-        <input type="text" name="CHAS" placeholder="CHAS" required="required" /><br>
-        <input type="text" name="NOX" placeholder="NOX" required="required" /><br>
-        <input type="text" name="RM" placeholder="RM" required="required" /><br>
-        <input type="text" name="Age" placeholder="Age" required="required" /><br>
-        <input type="text" name="DIS" placeholder="DIS" required="required" /><br>
-        <input type="text" name="RAD" placeholder="RAD" required="required" /><br>
-        <input type="text" name="TAX" placeholder="TAX" required="required" /><br>
-        <input type="text" name="PTRATIO" placeholder="PTRATIO" required="required" /><br>
-        <input type="text" name="B" placeholder="B" required="required" /><br>
-        <input type="text" name="LSTAT" placeholder="LSTAT" required="required" /><br>
-
-       
+      <input type="text" name="Store" placeholder="Store" required="required" /><br>
+    	<input type="text" name="DayOfWeek" placeholder="DayOfWeek" required="required" /><br>
+        <input type="text" name="Date" placeholder="Date" required="required" /><br>
+        <input type="text" name="Customers" placeholder="Customers" required="required" /><br>
+        <input type="text" name="Open" placeholder="Open" required="required" /><br>
+        <input type="text" name="Promo" placeholder="Promo" required="required" /><br>
+        <input type="text" name="StateHoliday" placeholder="StateHoliday" required="required" /><br>
+        <input type="text" name="SchoolHoliday" placeholder="SchoolHoliday" required="required" /><br>
+        <input type="text" name="StoreType" placeholder="StoreType" required="required" /><br>
+        <input type="text" name="Assortment" placeholder="Assortment" required="required" /><br>
+        <input type="text" name="CompetitionDistance" placeholder="CompetitionDistance" required="required" /><br>
+        <input type="text" name="CompetitionOpenSinceMonth" placeholder="CompetitionOpenSinceMonth" required="required" /><br>
+        <input type="text" name="CompetitionOpenSinceYear" placeholder="CompetitionOpenSinceYear" required="required" /><br>
+        <input type="text" name="Promo2" placeholder="Promo2" required="required" /><br>
+        <input type="text" name="Promo2SinceWeek" placeholder="Promo2SinceWeek" required="required" /><br>
+        <input type="text" name="Promo2SinceYear" placeholder="Promo2SinceYear" required="required" /><br>
+        <input type="text" name="PromoInterval" placeholder="PromoInterval" required="required" /><br>
+      
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
